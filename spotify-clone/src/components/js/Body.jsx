@@ -13,18 +13,18 @@ function Body({ spotify }) {
     <div className='body'>
       <Header spotify={spotify} />
 
-      <div className="body__info">
+      <div className="body_info">
         <img src={discover_weekly?.images[0].url} alt="" />
-        <div className="body__infoText">
+        <div className="body_infoText">
           <strong>PLAYLIST</strong>
           <h2>Discover Weekly</h2>
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
 
-      <div className="body__songs">
-        <div className="body__icons">
-          <PlayCircleFilledIcon className="body__shuffle" />
+      <div className="body_songs">
+        <div className="body_icons">
+          <PlayCircleFilledIcon className="body_shuffle" />
           <FavoriteIcon fontSize="large" />
           <MoreHorizIcon />
         </div>
