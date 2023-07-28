@@ -1,0 +1,13 @@
+.trackOption {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.trackOption > img {
+    height: 40px;
+}
+
+.trackOption_info {
+    text-align: left;
+}

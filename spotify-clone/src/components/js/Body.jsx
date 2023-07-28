@@ -9,6 +9,7 @@ import TrackOption from './TrackOption';
 
 function Body({ spotify }) {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
+  console.log(discover_weekly)
 
   return (
     <div className='body'>
@@ -30,7 +31,7 @@ function Body({ spotify }) {
           <MoreHorizIcon />
         </div>
         {discover_weekly?.tracks?.items?.map(track => (
-        <TrackOption title={track.track?.name} />
+        <TrackOption cover={track.track?.album?.images[0].url} title={track.track?.name} length={track.track?.duration_ms} />
       ))}
       </div>
     </div>
