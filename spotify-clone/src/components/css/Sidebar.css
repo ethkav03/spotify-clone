@@ -5,9 +5,11 @@
     padding-left: 10px;
     padding-right: 10px;
     min-width: 230px;
-    height: 100%;
     color: white;
-    background-color: #040404;
+    background-color: #181818;
+    border-radius: 20px;
+    margin: 10px 10px 0 10px;
+    margin-bottom: 10px;
   }
   
   .sidebar_title {
@@ -19,6 +21,6 @@
   .sidebar_logo {
     margin-right: auto;
     object-fit: contain;
-    height: 70px;
+    height: 60px;
     padding: 10px;
   }

@@ -1,7 +1,28 @@
 .trackOption {
     display: flex;
-    align-items: center;
     padding: 10px;
+    align-items: center;
+    gap: 15px;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+.track:hover {
+    background-color: #282828;
+}
+
+.track .MuiSvgIcon-root {
+    color: rgba(0, 0, 0, 0);
+}
+
+.track:hover .MuiSvgIcon-root {
+    color: rgba(255, 255, 255, 1);
 }
 
 .trackOption > img {
@@ -9,5 +30,22 @@
 }
 
 .trackOption_info {
-    text-align: left;
+    font-weight: lighter;
+    padding-left: 10px;
+}
+
+.trackOption_info > h4 {
+    font-size: 16px;
+}
+
+.trackOption_info > p {
+    font-size: 14px;
+}
+
+.trackOption_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
 }

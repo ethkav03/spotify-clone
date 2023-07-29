@@ -3,8 +3,14 @@
     height: 100%;
     color: white;
     padding: 30px;
-    background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+    margin: 10px 10px 10px 0;
+    background: linear-gradient(rgb(91, 87, 115), #181818 30%);
+    border-radius: 20px;
 }
+
+.body::-webkit-scrollbar {
+    display:block;
+  }
 
 .body_info {
     display: flex;
@@ -20,6 +26,7 @@
 
 .body_infoText {
     flex: 1;
+    align-items: center;
 }
 
 .body_infoText > h2 {
@@ -31,9 +38,13 @@
     font-size: 14px;
 }
 
+.body_infoText > p > img {
+    height: 20px;
+}
+
 .body_songs {
     margin: 20px -30px;
-    
+    background-color: rgba(0, 0, 0, .2);
 }
 
 .body_icons {

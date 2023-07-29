@@ -1,15 +1,35 @@
-import React from 'react'
-import "../css/TrackOption.css"
+import React from 'react';
+import "../css/TrackOption.css";
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-function TrackOption({ cover, title, artist, length }) {
+const getArtists = (artist) => {
+  const b = []
+  artist.forEach((a) => {
+    b.push(a.name)
+  })
+
+  return b.join(", ")
+}
+
+function TrackOption({ cover, title, artists, length }) {
   return (
-    <div className='trackOption'>
+    <div className='track'>
+      <div className='trackOption'>
+        <PlayArrowIcon />
         <img  src={cover} alt="" />
         <div className='trackOption_info'>
           <h4>{title}</h4>
-          <p>{artist}</p>
+          <p>{getArtists(artists)}</p>
         </div>
-        <p>{Math.floor(length/60000)}:{(Math.floor((length/1000)%60)).toString().padStart(2, '0')}</p>
+    </div>
+    <div className='trackOption_actions'>
+      <FavoriteBorderIcon />
+      <br />
+      <p>{Math.floor(length/60000)}:{(Math.floor((length/1000)%60)).toString().padStart(2, '0')}</p>
+      <MoreHorizIcon />
+    </div>
     </div>
   )
 }

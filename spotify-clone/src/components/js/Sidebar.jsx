@@ -11,7 +11,7 @@ function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <img className='sidebar_logo' src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="Spotify Logo" />
+      <img className='sidebar_logo' src="https://www.edigitalagency.com.au/wp-content/uploads/Spotify-Logo-png-RGB-White.png" alt="Spotify Logo" />
       <SidebarOption title="Home" Icon={HomeIcon} />
       <SidebarOption title="Search" Icon={SearchIcon} />
       <SidebarOption title="Your Library" Icon={LibraryMusicIcon} />
