@@ -1,8 +1,9 @@
 .trackOption {
     display: flex;
-    padding: 10px;
+    padding: 20px;
+    margin-left: 20px;
     align-items: center;
-    gap: 15px;
+    color: white;
 }
 
 .track {
@@ -11,6 +12,7 @@
     align-items: center;
     border-radius: 5px;
     margin: 0 20px;
+    cursor: pointer;
 }
 
 .track:hover {
@@ -22,7 +24,12 @@
 }
 
 .track:hover .MuiSvgIcon-root {
-    color: rgba(255, 255, 255, 1);
+    color: grey;
+}
+
+.track .MuiSvgIcon-root:hover {
+    color: white;
+    transition: 200ms color ease-in;
 }
 
 .trackOption > img {
@@ -30,8 +37,7 @@
 }
 
 .trackOption_info {
-    font-weight: lighter;
-    padding-left: 10px;
+    margin-left: 20px;
 }
 
 .trackOption_info > h4 {
@@ -40,6 +46,8 @@
 
 .trackOption_info > p {
     font-size: 14px;
+    margin-top: 3px;
+    color: gray;
 }
 
 .trackOption_actions {

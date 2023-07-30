@@ -2,7 +2,6 @@ import React from 'react';
 import "../css/TrackOption.css";
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 const getArtists = (artist) => {
   const b = []
@@ -13,15 +12,16 @@ const getArtists = (artist) => {
   return b.join(", ")
 }
 
-function TrackOption({ cover, title, artists, length }) {
+function TrackOption({ cover, title, artists, length, album }) {
   return (
     <div className='track'>
       <div className='trackOption'>
-        <PlayArrowIcon />
         <img  src={cover} alt="" />
         <div className='trackOption_info'>
           <h4>{title}</h4>
-          <p>{getArtists(artists)}</p>
+          <p>
+            {getArtists(artists)} - {album?.name}
+          </p>
         </div>
     </div>
     <div className='trackOption_actions'>

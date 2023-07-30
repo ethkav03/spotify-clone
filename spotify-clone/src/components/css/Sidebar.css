@@ -7,9 +7,14 @@
     min-width: 230px;
     color: white;
     background-color: #181818;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 10px 10px 0 10px;
     margin-bottom: 10px;
+    overflow: auto;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none;
   }
   
   .sidebar_title {
