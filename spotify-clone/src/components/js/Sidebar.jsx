@@ -11,16 +11,16 @@ function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <SidebarOption title="Home" Icon={HomeIcon} />
-      <SidebarOption title="Search" Icon={SearchIcon} />
-      <SidebarOption title="Your Library" Icon={LibraryMusicIcon} />
+      <SidebarOption key="home" title="Home" Icon={HomeIcon} />
+      <SidebarOption key="search" title="Search" Icon={SearchIcon} />
+      <SidebarOption key="library" title="Your Library" Icon={LibraryMusicIcon} />
 
       <br />
       <strong className='sidebar_title'>PLAYLISTS</strong>
       <hr />
 
       {playlists?.items?.map(playlist => (
-        <SidebarOption title={playlist.name} />
+        <SidebarOption key={playlist.href} title={playlist.name} />
       ))}
     </div>
   )

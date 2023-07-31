@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../css/Footer.css";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
@@ -8,16 +8,29 @@ import RepeatIcon from '@mui/icons-material/Repeat';
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import VolumeDownIcon from '@mui/icons-material/VolumeDown';
 import { Grid, Slider } from '@mui/material';
+import { useDataLayerValue } from '../../DataLayer';
 
+function Footer(props) {
+  const [{ current_track }, dispatch] = useDataLayerValue();
 
-function Footer() {
+  const getArtists = (artist) => {
+    if (artist) {
+      const b = []
+      artist.forEach((a) => {
+        b.push(a.name)
+      })
+  
+    return b.join(", ")
+    }
+  }
+
   return (
     <div className='footer'>
       <div className="footer_left">
-        <img className='footer_albumLogo' src="https://i.discogs.com/vg5A9gQurnkKPOmArIhb1cUZYN0kB3qwXzzrgxSe9Qs/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MDI4/MzkxLTE2NTkwMzgy/NTMtNTE3NS5qcGVn.jpeg" alt="" />
+        <img className='footer_albumLogo' src={current_track?.item?.album?.images[0].url} alt="" />
         <div className="footer_songInfo">
-          <h4>Wonderful Life</h4>
-          <p>Two Door Cinema Club</p>
+          <h4>{current_track?.item?.name }</h4>
+          <p>{getArtists(current_track?.item?.artists)}</p>
         </div>
       </div>
       <div className="footer_center">

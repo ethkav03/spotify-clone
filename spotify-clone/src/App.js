@@ -38,17 +38,34 @@ function App() {
         });
       });
 
+      spotify.getMyTopArtists().then((response) =>
+        dispatch({
+          type: "SET_TOP_ARTISTS",
+          top_artists: response
+        })
+      );
+
+      dispatch({
+        type: "SET_SPOTIFY",
+        spotify: spotify,
+      })
+
       spotify.getPlaylist("37i9dQZEVXcIdfEM4Znmmq").then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response
         });
       });
+
+      spotify.getMyCurrentPlayingTrack().then((response) => {
+        dispatch({
+          type: "SET_CURRENT_TRACK",
+          current_track: response
+        })
+      })
     }
   }, []);
 
-  {/*console.log("user: ", user)*/}
-  {/*console.log("token", token)*/}
 
   return (
     <div className="app">

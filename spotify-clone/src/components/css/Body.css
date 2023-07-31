@@ -1,8 +1,8 @@
 .body {
-    flex: 0.8;
+    flex: 0.6;
     color: white;
     padding: 30px;
-    margin: 10px 10px 10px 0;
+    margin: 10px 0;
     background: linear-gradient(rgb(91, 87, 115), #181818 40%);
     border-radius: 10px;
     overflow: auto;

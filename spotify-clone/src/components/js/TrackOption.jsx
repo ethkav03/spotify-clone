@@ -12,10 +12,10 @@ const getArtists = (artist) => {
   return b.join(", ")
 }
 
-function TrackOption({ cover, title, artists, length, album }) {
+function TrackOption({ id, cover, title, artists, length, album, playSong }) {
   return (
     <div className='track'>
-      <div className='trackOption'>
+      <div className='trackOption' >
         <img  src={cover} alt="" />
         <div className='trackOption_info'>
           <h4>{title}</h4>

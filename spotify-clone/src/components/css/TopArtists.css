@@ -1,0 +1,10 @@
+.topArtists {
+    color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 0.2;
+    background-color: #181818;
+    border-radius: 10px;
+    overflow: auto;
+}
