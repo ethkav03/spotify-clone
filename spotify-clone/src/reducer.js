@@ -4,11 +4,12 @@ export const initialState = {
   spotify: null,
   discover_weekly: null,
   top_artists: null,
-  current_track: null,
+  playing: false,
   item: null,
 };
 
 const reducer = (state, action) => {
+  console.log(action);
   switch (action.type) {
     case "SET_USER":
       return {
@@ -16,10 +17,10 @@ const reducer = (state, action) => {
         user: action.user,
       };
 
-    case "SET_CURRENT_TRACK":
+    case "SET_PLAYING":
       return {
         ...state,
-        current_track: action.current_track,
+        playing: action.playing,
       };
 
     case "SET_ITEM":

@@ -19,9 +19,29 @@ function Body({ spotify }) {
         total += track?.track?.duration_ms;
       })
 
-      return `${Math.floor(total/3600000)} hr ${(Math.floor((total/1000)%600)).toString().padStart(2, '0')} mins`
+      return `${Math.floor(total/3600000)} hr ${(Math.floor((total/1000)%600)).toString().padStart(2, '0')} mins`;
     }
-  }
+  };
+
+  const playPlaylist = (_) => {
+    spotify
+      .play({
+        context_uri: `spotify:playlist:37i9dQZEVXcIdfEM4Znmmq`,
+      })
+      .then((_) => {
+        spotify.getMyCurrentPlayingTrack().then((r) => {
+          console.log("r", r);
+          dispatch({
+            type: "SET_ITEM",
+            item: r.item,
+          });
+          dispatch({
+            type: "SET_PLAYING",
+            playing: true,
+          });
+        });
+      });
+  };
 
   return (
     <div className='body'>
@@ -40,7 +60,7 @@ function Body({ spotify }) {
 
       <div className="body_songs">
         <div className="body_icons">
-          <PlayCircleFilledIcon className="body_shuffle" />
+          <PlayCircleFilledIcon className="body_shuffle" onClick={playPlaylist} />
           <FavoriteBorderIcon fontSize="large" />
           <MoreHorizIcon />
         </div>

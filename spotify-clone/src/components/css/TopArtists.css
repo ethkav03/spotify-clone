@@ -1,10 +1,41 @@
 .topArtists {
     color: white;
     margin: 10px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     flex: 0.2;
     background-color: #181818;
     border-radius: 10px;
     overflow: auto;
+}
+
+.topArtists > h1 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.topArtists::-webkit-scrollbar {
+    display: none;
+}
+
+.artist {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.artist:hover {
+    background-color: #080808;
+}
+
+.artist > img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.artist > p {
+    margin-left: 10px;
 }
