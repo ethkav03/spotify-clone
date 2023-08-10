@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import "../css/Footer.css";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
@@ -23,6 +22,8 @@ function Footer(props) {
     return b.join(", ")
     }
   }
+
+  console.log(current_track)
 
   return (
     <div className='footer'>
